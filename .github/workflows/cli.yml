@@ -1,0 +1,24 @@
+name: CLI
+
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+
+jobs:
+  cli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '>=24'
+      - name: Setup Go
+        run: yarn install
+      - name: Linter
+        run: yarn lint
+      - name: Build
+        run: yarn build
+      - name: Tests
+        run: yarn test
+      - name: Check Types
+        run: yarn check-types
