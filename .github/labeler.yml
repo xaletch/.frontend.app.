@@ -1,0 +1,45 @@
+fonts:
+  - changed-files:
+      - any-glob-to-any-file: src/app/fonts/**
+
+providers:
+  - changed-files:
+      - any-glob-to-any-file: src/app/providers/**
+
+pages:
+  - changed-files:
+      - any-glob-to-any-file: src/pages/**
+
+features:
+  - changed-files:
+    - any-glob-to-any-file: 'src/features/**'
+
+ui:
+  - changed-files:
+    - any-glob-to-any-file: 'src/shared/ui/**'
+
+api:
+  - changed-files:
+    - any-glob-to-any-file: 'src/shared/api/**'
+
+libs:
+  - changed-files:
+    - any-glob-to-any-file: src/shared/lib/**
+
+widgets:
+  - changed-files:
+    - any-glob-to-any-file: 'src/widgets/**'
+
+config:
+  - changed-files:
+      - any-glob-to-any-file: config/**
+
+docs:
+  - changed-files:
+    - any-glob-to-any-file:
+        - '**/*.md'
+        - 'README.md'
+
+workflows:
+  - changed-files:
+    - any-glob-to-any-file: .github/workflows/**
