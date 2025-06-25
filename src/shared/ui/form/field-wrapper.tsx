@@ -3,6 +3,7 @@ import { Label, Error } from "./";
 
 type FieldWrapperProps = {
   label?: string;
+  required?: boolean;
   className?: string;
   children: React.ReactNode;
   error?: FieldError | undefined;
@@ -11,13 +12,13 @@ type FieldWrapperProps = {
 export type FieldWrapperPassThroughProps = Omit<FieldWrapperProps, 'className' | 'children'>;
 
 export const FieldWrapper = (props: FieldWrapperProps) => {
-  const { label, children, error } = props;
+  const { label, required=false, children, error } = props;
 
   return (
     <div>
       <Label>
-        {label}
-        <div className="mt-1">{children}</div>
+        {label} {required ? <span className="text-red-5">*</span> : undefined}
+        <div className="mt-0.5">{children}</div>
       </Label>
       <Error errorMessage={error?.message}/>
     </div>
