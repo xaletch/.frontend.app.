@@ -5,15 +5,15 @@ import * as React from 'react';
 import { Spinner } from '../spinner';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-sm text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 cursor-pointer',
   {
     variants: {
       variant: {
-        default: 'bg-yellow-10 text-gray-12 shadow hover:bg-yellow-10/90',
+        default: 'bg-yellow-9 text-yellow-12 shadow hover:bg-yellow-10 active:bg-yellow-10/80',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        default: 'h-9 px-4 py-2',
+        default: 'w-full h-12.5 px-4 py-2',
         sm: 'h-8 rounded-md px-3 text-xs',
         lg: 'h-10 rounded-md px-8',
         icon: 'size-9',
@@ -63,4 +63,5 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = 'Button';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { Button, buttonVariants };

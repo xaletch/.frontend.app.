@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build --mode production",
     "lint": "eslint .",
+    "test": "echo \"Error: no test specified\"",
     "preview": "vite preview",
     "icons:build": "rimraf ./src/shared/icons && npx @svgr/cli --typescript --out-dir src/shared/icons --index-template config/svgr-index-template.js -- src/shared/assets/icons && npx prettier ./src/shared/icons --write",
     "check-types": "tsc --project tsconfig.json --pretty --noEmit"
