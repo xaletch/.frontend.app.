@@ -5,6 +5,6 @@ export const Route = createLazyFileRoute('/login')({
   component: RouteComponent,
 })
 
-function RouteComponent() {
+function RouteComponent() { 
   return <Login/>
 }

@@ -18,8 +18,18 @@ export const AuthAPI = API.injectEndpoints({
         method: "POST",
         body,
       }),
-    })
+    }),
+    logout: builder.mutation<void, void>({
+      query: () => ({
+        url: "auth/logout",
+        method: "POST",
+      }),
+    }),
   }),
 });
 
-export const { useLoginMutation, useRegisterMutation } = AuthAPI;
+export const { 
+  useLoginMutation, 
+  useRegisterMutation, 
+  useLogoutMutation,
+} = AuthAPI;

@@ -18,6 +18,7 @@ export const API = createApi({
       }
       return headers;
     },
+    credentials: "include",
   }),
   reducerPath: "API",
 

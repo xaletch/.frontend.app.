@@ -1,4 +1,6 @@
+import { useAuth } from "@/features/auth/model/hooks/auth.hook";
 import { Card } from "@/shared/ui";
+import { Navigate } from "@tanstack/react-router";
 
 interface AuthLayoutProps {
   title: string;
@@ -7,6 +9,14 @@ interface AuthLayoutProps {
 }
 
 export const AuthLayout = ({ title, description="", children }: AuthLayoutProps) => {
+  const { data, isError, isLoading } = useAuth();
+
+  if (isLoading) return null;
+
+  if (data && !isError) {
+    return <Navigate to={"/"} replace />
+  }
+
   return (
     <>
       <div className="min-h-screen flex flex-col justify-center items-center py-24 sm:px-6 lg:px-8 px-4">
