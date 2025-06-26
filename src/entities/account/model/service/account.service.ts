@@ -1,9 +1,9 @@
 import { API } from "@/shared/api";
-import type { Account } from "../types/account.type";
+import type { IAccount } from "../..";
 
 export const AccountApi = API.injectEndpoints({
   endpoints: (builder) => ({
-    getAccount: builder.query<Account, void>({
+    getAccount: builder.query<IAccount, void>({
       query: () => ({
         url: "profile",
         method: "GET",

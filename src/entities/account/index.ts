@@ -1,5 +1,6 @@
 // types
 export * from './model/types/account.type';
+export * from './model/types/user.type';
 
 // service
 export * from './model/service/account.service';

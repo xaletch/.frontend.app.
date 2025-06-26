@@ -1,6 +1,9 @@
 export interface LoginResponse {
-  id: string;
-  name: string;
+  user: {
+    id: string;
+    name: string;
+    email: string;
+  }
 }
 
 export interface LoginErrorResponse {

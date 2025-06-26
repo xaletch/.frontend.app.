@@ -1,8 +1,8 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { Account } from "../types/account.type";
+import type { IAccount } from "../types/account.type";
 
 interface AccountState {
-  account: Account | undefined;
+  account: IAccount | undefined;
 }
 
 const initialState: AccountState = {
@@ -13,7 +13,7 @@ const accountSlice = createSlice({
   name: "account",
   initialState,
   reducers: {
-    setAccount: (state, action: PayloadAction<Account>) => {
+    setAccount: (state, action: PayloadAction<IAccount>) => {
       state.account = action.payload;
     },
   },
