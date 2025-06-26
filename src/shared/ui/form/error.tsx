@@ -9,7 +9,7 @@ export const Error = ({ errorMessage }: ErrorProps) => {
     <div
       role="alert"
       aria-label={errorMessage}
-      className="text-sm font-semibold text-red-500"
+      className="mt-0.5 text-[13px] font-normal text-red-5"
     >
       {errorMessage}
     </div>

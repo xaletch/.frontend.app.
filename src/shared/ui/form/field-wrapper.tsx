@@ -15,7 +15,7 @@ export const FieldWrapper = (props: FieldWrapperProps) => {
   const { label, required=false, children, error } = props;
 
   return (
-    <div>
+    <div className="mb-5">
       <Label>
         {label} {required ? <span className="text-red-5">*</span> : undefined}
         <div className="mt-0.5">{children}</div>
