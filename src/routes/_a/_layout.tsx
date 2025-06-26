@@ -1,4 +1,5 @@
 import { Layout } from '@/app/layout'
+import { PrivateRoute } from '@/features/auth'
 import { createFileRoute, Outlet } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/_a/_layout')({
@@ -7,10 +8,10 @@ export const Route = createFileRoute('/_a/_layout')({
 
 function RouteComponent() {
   return (
-    // <PrivateRoute>
+    <PrivateRoute>
       <Layout>
         <Outlet />
       </Layout>
-    // </PrivateRoute>
+    </PrivateRoute>
   )
 }

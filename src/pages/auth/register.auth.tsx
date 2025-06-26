@@ -1,5 +1,10 @@
+import { RegisterForm } from "@/features/auth"
+import { AuthLayout } from "@/widgets"
+
 export const Register = () => {
   return (
-    <div>register.auth</div>
+    <AuthLayout title={"Создайте аккаунт"}>
+      <RegisterForm />
+    </AuthLayout>
   )
 }
