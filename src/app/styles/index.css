@@ -276,8 +276,15 @@
   --text-sm: 15px;
   
   --radius-sm: 15px;
+  --radius-5xl: 42px;
 
   --shadow-input: 0 4px 10px 0 var(--color-gray-shadow);
+}
+
+@utility container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 @layer base {
