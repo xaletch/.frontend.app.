@@ -1,5 +1,17 @@
-export interface Account {
+import type { User } from "./user.type";
+
+export type Accounts = {
   id: string;
-  name: string;
-  email: string;
+  type: string;
+  provider: string;
+  refreshToken: string | null;
+  accessToken: string | null;
+  expiresAt: number;
+}
+
+export interface IAccount {
+  user: User;
+  isVerified: boolean;
+  isTwoFactorEnabled: boolean;
+  accounts: Accounts[];
 }
