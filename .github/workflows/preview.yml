@@ -10,7 +10,7 @@ on:
         required: true
       VERCEL_ORG_ID:
         required: true
-      GITHUB_TOKEN:
+      PAT_TOKEN:
         required: true
       VERCEL_PROJECT_ID:
         required: true
@@ -23,7 +23,7 @@ jobs:
       - uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.PAT_TOKEN }}
           github-comment: true
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
