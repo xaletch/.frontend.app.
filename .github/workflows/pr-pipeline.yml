@@ -2,22 +2,22 @@ name: PR
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [assigned, opened, synchronize, reopened]
     branches:
       - main
 
 jobs:
   CLI:
-    uses: ./github/reusable-workflows/cli.yml
+    uses: ./github/reusable-workflows/cli.yml@main
   
   Labeler:
-    uses: ./github/reusable-workflows/labeler.yml
+    uses: ./github/reusable-workflows/labeler.yml@main
     secrets:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   Preview:
     needs: [CLI, Labeler]
-    uses: ./github/reusable-workflows/preview.yml
+    uses: ./github/reusable-workflows/preview.yml@main
     secrets:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
