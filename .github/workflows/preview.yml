@@ -1,9 +1,19 @@
 name: Preview
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      VERCEL_TOKEN:
+        required: true
+      VERCEL_ORG_ID:
+        required: true
+      PAT_TOKEN:
+        required: true
+      VERCEL_PROJECT_ID:
+        required: true
 
 jobs:
   Preview:
@@ -13,10 +23,8 @@ jobs:
       - uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: ''
+          github-token: ${{ secrets.PAT_TOKEN }}
+          github-comment: true
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
-          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
           working-directory: ./
-        env:
-          VERCEL_ENV: preview

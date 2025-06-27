@@ -9,3 +9,5 @@ Dockerfile
 
 .env
 .env.*
+
+.vercel
