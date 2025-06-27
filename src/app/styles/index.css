@@ -58,7 +58,7 @@
 }
 
 :root {
-  --color-background: #f2f3f4;
+  --color-background: #ffffff;
   --color-foreground: #202020;
 
   --color-yellow-1: oklch(95.4% 0.0033 91.35);
