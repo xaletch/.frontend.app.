@@ -1,8 +1,6 @@
 name: CLI
 
 on:
-  pull_request:
-    types: [assigned, opened, synchronize, reopened]
   workflow_call:
     inputs:
       run_linter:

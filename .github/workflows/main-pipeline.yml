@@ -6,7 +6,7 @@ on:
 
 jobs:
   CLI:
-    uses: ./.github/workflows/cli.yml
+    uses: ./.github/reusable-workflows/cli.yml
   
   Deploy:
     needs: [CLI]
