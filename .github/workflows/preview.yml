@@ -8,8 +8,6 @@ on:
     secrets:
       VERCEL_TOKEN:
         required: true
-      GITHUB_TOKEN:
-        required: true
       VERCEL_ORG_ID:
         required: true
       VERCEL_PROJECT_ID:
