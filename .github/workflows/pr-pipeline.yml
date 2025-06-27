@@ -8,16 +8,14 @@ on:
 
 jobs:
   CLI:
-    uses: ./github/workflows/cli.yml@main
+    uses: ./cli.yml@main
   
   Labeler:
-    uses: ./github/workflows/labeler.yml@main
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    uses: ./labeler.yml@main
 
   Preview:
     needs: [CLI, Labeler]
-    uses: ./github/workflows/preview.yml@main
+    uses: ./preview.yml@main
     secrets:
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

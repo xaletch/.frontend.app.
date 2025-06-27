@@ -2,9 +2,6 @@ name: "Labels"
 
 on:
   workflow_call:
-    secrets:
-      GITHUB_TOKEN:
-        pull_request: true
 
 jobs:
   labeler:
