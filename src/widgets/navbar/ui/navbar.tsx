@@ -4,7 +4,7 @@ import { NavbarLink } from "@/features/navbar"
 
 export const Navbar = () => {
   return (
-    <div className="sticky top-0 py-8 z-10 border-b border-r sm:border-b border-gray-contrast">
+    <div className="sticky top-0 py-8 z-10 border-r border-gray-2/80">
       <aside className="w-full sm:w-63.5 h-full p-8 rounded-5xl">
         <nav className="flex flex-col gap-8">
           <div>
@@ -13,7 +13,7 @@ export const Navbar = () => {
               <span className="ml-3 text-sm font-medium">Начать</span>
             </div>
             <NavbarList>
-              <NavbarLink name={"НАЗВАНИЕ"} href={"/"} />
+              <NavbarLink name={"beta"} href={"/"} />
             </NavbarList>
           </div>
           {/* <div>
