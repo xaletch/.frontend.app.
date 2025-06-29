@@ -1,4 +1,4 @@
-import type { ThemeSubject, ThemeType } from "@/entities/themes/model/type/theme.type";
+import type { ThemeSubject, ThemeType } from "@/entities/themes";
 
 export interface Plan {
   id: string;
